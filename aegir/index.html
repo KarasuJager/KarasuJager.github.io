@@ -137,13 +137,14 @@ section.block{padding-block:112px;border-bottom:1px solid var(--line)}
 .svc .featured{background:var(--panel)}
 .svc .badge{position:absolute;top:18px;right:18px;font:600 10px/1 var(--f-mono);letter-spacing:.12em;color:#fff;background:var(--accent);padding:5px 7px}
 
-.more{border-top:1px dashed var(--line);padding-top:14px}
+.more{border:1px solid var(--line);border-top:0;background:var(--panel);padding:18px 28px}
 .more summary{cursor:pointer;list-style:none;font:500 12px/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent-hi);display:flex;align-items:center;justify-content:space-between;gap:10px}
 .more summary::-webkit-details-marker{display:none}
 .more summary::after{content:"+";font-size:16px;transition:transform .2s}
 .more[open] summary::after{transform:rotate(45deg)}
 .more summary:hover{color:var(--fg)}
-.more dl{margin:14px 0 0;display:flex;flex-direction:column;gap:12px}
+.more dl{margin:22px 0 6px;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px 32px}
+@media (max-width:600px){.more{padding:16px 20px}}
 .more dt{font:600 14px/1.2 var(--f-display);letter-spacing:.08em;text-transform:uppercase;color:var(--fg)}
 .more dd{margin:4px 0 0;font:400 12.5px/1.55 var(--f-mono);color:var(--muted)}
 /* AI band */
@@ -331,18 +332,6 @@ footer .bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16p
           <h3>Aplicaciones web y APIs</h3>
           <p>Tu web, tu panel de clientes, tus formularios y las APIs que hay detrás.</p>
           <ul><li>Control de acceso e IDOR</li><li>Autenticación y sesiones</li><li>Inyecciones y XSS</li><li>Lógica de negocio</li></ul>
-          <details class="more">
-            <summary>Ver todo lo que revisamos</summary>
-            <dl>
-              <div><dt>Autenticación</dt><dd>Login, recuperación de contraseña, 2FA, fuerza bruta y enumeración de usuarios</dd></div>
-              <div><dt>Sesiones</dt><dd>Cookies, tokens JWT, cierre de sesión, fijación y expiración de sesión</dd></div>
-              <div><dt>Control de acceso</dt><dd>IDOR, escalada de privilegios horizontal y vertical, separación de roles</dd></div>
-              <div><dt>Entrada de datos</dt><dd>SQLi, XSS, SSRF, inyección de plantillas, subida de ficheros</dd></div>
-              <div><dt>APIs</dt><dd>OWASP API Top 10, exposición excesiva de datos, rate limiting, GraphQL</dd></div>
-              <div><dt>Lógica de negocio</dt><dd>Precios, reservas, cupones, condiciones de carrera y pasos que se pueden saltar</dd></div>
-              <div><dt>Configuración</dt><dd>Cabeceras de seguridad, CORS, TLS, ficheros y paneles expuestos</dd></div>
-            </dl>
-          </details>
         </article>
         <article class="featured">
           <span class="badge">Especialidad</span>
@@ -367,6 +356,18 @@ footer .bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16p
           <ul><li>Subdominios olvidados</li><li>Secretos en JavaScript</li><li>Paneles expuestos</li><li>Configuración TLS y cabeceras</li></ul>
         </article>
       </div>
+      <details class="more">
+        <summary>Ver todo lo que revisamos en web y APIs</summary>
+        <dl>
+          <div><dt>Autenticación</dt><dd>Login, recuperación de contraseña, 2FA, fuerza bruta y enumeración de usuarios</dd></div>
+          <div><dt>Sesiones</dt><dd>Cookies, tokens JWT, cierre de sesión, fijación y expiración de sesión</dd></div>
+          <div><dt>Control de acceso</dt><dd>IDOR, escalada de privilegios horizontal y vertical, separación de roles</dd></div>
+          <div><dt>Entrada de datos</dt><dd>SQLi, XSS, SSRF, inyección de plantillas, subida de ficheros</dd></div>
+          <div><dt>APIs</dt><dd>OWASP API Top 10, exposición excesiva de datos, rate limiting, GraphQL</dd></div>
+          <div><dt>Lógica de negocio</dt><dd>Precios, reservas, cupones, condiciones de carrera y pasos que se pueden saltar</dd></div>
+          <div><dt>Configuración</dt><dd>Cabeceras de seguridad, CORS, TLS, ficheros y paneles expuestos</dd></div>
+        </dl>
+      </details>
     </div>
   </section>
 
