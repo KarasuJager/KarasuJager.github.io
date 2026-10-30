@@ -89,6 +89,7 @@ p{margin:0}
 .dots{display:flex;gap:6px}.dots i{width:9px;height:9px;border-radius:50%;background:var(--line)}
 .dots i:first-child{background:var(--accent)}
 .term pre{margin:0;padding:22px 20px 24px;font:400 13.5px/1.85 var(--f-mono);color:var(--muted);overflow-x:auto;white-space:pre}
+@media (max-width:600px){.term pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;padding:18px 16px 20px}.term .vuln{margin:6px -16px;padding:8px 16px}}
 .term .ln{display:block;transition:opacity .35s,color .35s}
 .term.run .ln{opacity:.22}
 .term.run .ln.on{opacity:1}
